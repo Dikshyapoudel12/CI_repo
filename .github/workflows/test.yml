@@ -32,9 +32,8 @@ jobs:
               run: |
                    cd contact-fox-backend
                    npm i
-                   npm start &
-                   wait-for-it 
-
+                   npm start
+                   
             - name: Run Test  
               run: |
                   cd Features4/tests
