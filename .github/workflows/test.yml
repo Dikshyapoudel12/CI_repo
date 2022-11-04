@@ -20,6 +20,8 @@ jobs:
               uses: supercharge/mongodb-github-action@1.8.0
               with:
                   mongodb-version: '5.0'
+                  sudo apt-get install wait-for-it -y
+                   wait-for-it -h localhost -p 27017 -t 10 -q -s -- echo " Mongodb is running"
     
             - name: Run Frontend
               run: |
