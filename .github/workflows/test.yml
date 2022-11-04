@@ -16,15 +16,14 @@ jobs:
               with:
                   node-version: 14.x
 
-            - name: Install wait for it
-              uses: sudo apt-get install wait-for-it -y
-
-
             - name: Start MongoDB
               uses: supercharge/mongodb-github-action@1.8.0
               with:
                   mongodb-version: '5.0'
 
+            - name: Install wait for it
+              uses: sudo apt-get install wait-for-it -y
+    
             - name: Run Frontend
               run: |
                    cd contact-fox-frontend
