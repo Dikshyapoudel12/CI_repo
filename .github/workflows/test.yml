@@ -37,4 +37,4 @@ jobs:
               run: |
                   cd Features4/tests
                   npm i
-                  npm run test:e2e .\e2e\feature\login.feature
+                  npm run test:e2e .\e2e\feature\
