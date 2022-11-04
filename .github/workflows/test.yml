@@ -26,12 +26,14 @@ jobs:
                    cd contact-fox-frontend
                    npm i
                    npm start &
+                   wait-for-it
 
             - name: Run Backend
               run: |
                    cd contact-fox-backend
                    npm i
-                   npm start & 
+                   npm start &
+                   wait-for-it 
 
             - name: Run Test  
               run: |
