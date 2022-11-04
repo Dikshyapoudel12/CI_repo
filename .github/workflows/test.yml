@@ -16,6 +16,11 @@ jobs:
               with:
                   node-version: 14.x
 
+            - name: Start MongoDB
+              uses: supercharge/mongodb-github-action@1.8.0
+                 with:
+                  mongodb-version: '5.0'
+
             - name: Run Frontend
               run: |
                    cd contact-fox-frontend
@@ -32,9 +37,4 @@ jobs:
               run: |
                   cd Features4/tests
                   npm i
-                  npm run test:e2e .\e2e\feature\login.feature   
-            - name: Start MongoDB
-              uses: supercharge/mongodb-github-action@1.8.0
-                 with:
-                  mongodb-version: '5.0'
-
+                  npm run test:e2e .\e2e\feature\login.feature
